@@ -1,31 +1,61 @@
 .navigation {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0.5rem 0rem;
-    background-color: #fff;
-    color: black;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);    
-  }
-  .brand-name {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    margin-left: 1rem;
-  }
-  .navigation-menu ul {
-    margin-left: 0em;
-    display: flex;
-    color: black;
-  }
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation-menu {
+  margin-left: 70px;
+}
+
+
+.brand-name:hover {
+  color: #555;
+}
+
+.navigation-menu ul {
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navigation-menu li {
-    display: inline-block;
-    display: -moz-inline-box;
-    display: inline; 
-    zoom: 1; 
-    margin-left: 15%;
-    width: 32%;
-    text-align: center;
+  margin: 0 1rem;
+  
+  text-align: center;
+  width: 25%;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.navigation-menu li:hover {
+  transform: scale(1.1);
+}
+
+.navigation-menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation-menu a:hover {
+  color: #555;
 }

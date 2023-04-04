@@ -1,27 +1,33 @@
 import { useState } from "react";
-
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
-
-import "../CSS/navbar.css"
+import { Link } from 'react-router-dom';
+import "../CSS/navbar.css";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuOpen = () => {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
     <nav className="navigation">
-      <a href="/" className="brand-name">
+      <Link to="/" className="brand-name">
         SWPSUM
-      </a>
-      
-      <div className="navigation-menu">
-          <ul>
-            
-            {navLinks.map((nav) => (
-              <li>
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      </Link>
+      <div className={menuOpen ? "navigation-menu open" : "navigation-menu"}>
+        <ul>
+          {navLinks.map((nav) => (
+            <li key={nav.id}>
+              <Link to={`/${nav.id}`}>{nav.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="menu-icon" onClick={handleMenuOpen}>
+        {menuOpen ? <img src={close} alt="close icon" /> : <img src={menu} alt="menu icon" />}
+      </div>
     </nav>
   );
 }

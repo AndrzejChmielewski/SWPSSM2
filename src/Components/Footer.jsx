@@ -1,25 +1,26 @@
-import React from 'react'
-
-import "../CSS/footer.css"
+import React from 'react';
+import '../CSS/footer.css';
 
 const Footer = () => {
   return (
     <nav className="footer">
-      <u1>
-       <a>Dane do wysyłki<br/> ul. Wysyłkowa 5<br/> 02-123 Warszawa</a>
-       
+      <ul>
         <li>
-          <a>tel: 48 112-333-444</a>
+          <a href="#">
+            Dane do wysyłki<br />
+            ul. Wysyłkowa 5<br />
+            02-123 Warszawa
+          </a>
         </li>
-
         <li>
-         <a>email: swpsum@serwis.com</a>
+          <a href="#">tel: 48 112-333-444</a>
         </li>
-
-
-      </u1>
+        <li>
+          <a href="#">email: swpsum@serwis.com</a>
+        </li>
+      </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

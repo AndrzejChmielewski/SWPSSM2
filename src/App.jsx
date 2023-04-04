@@ -1,29 +1,31 @@
 import React from 'react'
-import { Billing, Business, CardDeal, Contacts, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
-import "./index.css";
+import { Billing, Business, Order, Contacts, Services, Footer, Navbar, Reports, Testimonials, Hero } from "./components";
+import "./CSS/index.css";
+
+import {BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 const App = () => (
 
+
+  
   <div>
+      <Router>
       <Navbar />
-      <div className="container">
-        <article>
-          <h1></h1>
-        </article>
-      </div>
+      <Routes>
+        
+        <Route path="/" element={<Hero />} default />
+        <Route path="/home" element={<Hero />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/Order" element={<Order />} />
+        <Route path="/Reports" element={<Reports />} />
+        <Route path="/Contacts" element={<Contacts />} />
+
+      </Routes>
+      </Router>
       
-      <div>
-        <Hero />
-      </div>
-      <Stats />
-      <Business />
-      <Billing />
-      <CardDeal />
-      <Testimonials />
-      <Contacts />
-      <CTA />
       <Footer />
   </div>
 );
+
 
 export default App;

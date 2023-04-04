@@ -1,22 +1,22 @@
+import Hero from "./Hero";
 import Navbar from "./Navbar";
+import Services from "./Services";
 import Billing from "./Billing";
-import CardDeal from "./CardDeal";
+import Order from "./Order";
 import Business from "./Business";
 import Contacts from "./Contacts";
-import CTA from "./CTA";
-import Stats from "./Stats";
+import Reports from "./Reports";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
-import Hero from "./Hero";
 
 export {
   Navbar,
   Billing,
-  CardDeal,
+  Order,
   Business,
   Contacts,
-  CTA,
-  Stats,
+  Services,
+  Reports,
   Footer,
   Testimonials,
   Hero,
